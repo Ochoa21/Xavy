@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Colas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Bienvenido al gestor de colas</h1>
+    <div id="forms">
+      <div class="form-container" id="login-form">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="login-username" placeholder="Usuario">
+        <input type="password" id="login-password" placeholder="Contraseña">
+        <button onclick="login()">Iniciar Sesión</button>
+      </div>
+      <div class="form-container" id="otp-form" style="display: none;">
+        <h2>Ingresar OTP</h2>
+        <input type="text" id="otp" placeholder="OTP">
+        <button onclick="verifyOtp()">Verificar OTP</button>
+      </div>
+      <div class="form-container" id="register-form">
+        <h2>Registrar Usuario</h2>
+        <input type="text" id="register-username" placeholder="Usuario">
+        <input type="password" id="register-password" placeholder="Contraseña">
+        <input type="password" id="owner-key" placeholder="Clave de Dueño">
+        <button onclick="register()">Registrar</button>
+      </div>
+      <div class="form-container" id="block-url-form" style="display: none;">
+        <h2>Bloquear URL</h2>
+        <input type="text" id="block-url" placeholder="URL">
+        <button onclick="blockUrl()">Bloquear URL</button>
+        <h3>URLs Bloqueadas</h3>
+        <ul id="blocked-urls"></ul>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
